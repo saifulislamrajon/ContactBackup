@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context="com.example.saiful.contactbackup.MainActivity">
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.example.saiful.contactbackup.MainActivity">
+
+        <RelativeLayout
+            android:padding="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/contactViewButton"
+                android:layout_width="150dp"
+                android:layout_height="120dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="60dp"
+                android:onClick="contactButton"
+                android:src="@drawable/contact" />
+
+            <ImageView
+                android:id="@+id/messageViewButton"
+                android:layout_width="150dp"
+                android:layout_height="120dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="60dp"
+                android:onClick="messageButton"
+                android:src="@drawable/message" />
+            <ImageView
+                android:id="@+id/imageViewButton"
+                android:layout_width="150dp"
+                android:layout_height="120dp"
+                android:onClick="imageButton"
+                android:src="@drawable/image"
+                android:layout_below="@+id/contactViewButton"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="65dp" />
+
+            <ImageView
+                android:id="@+id/unknownViewButton"
+                android:layout_width="150dp"
+                android:layout_height="120dp"
+                android:onClick="unknownButton"
+                android:src="@drawable/location"
+                android:layout_alignTop="@+id/imageViewButton"
+                android:layout_alignStart="@+id/messageViewButton" />
+        </RelativeLayout>
+    </android.support.v4.widget.DrawerLayout>
+
+
+</LinearLayout>

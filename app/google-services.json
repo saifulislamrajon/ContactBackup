@@ -1,0 +1,228 @@
+{
+  "project_info": {
+    "project_number": "1098424389574",
+    "firebase_url": "https://mytrainingproject-be660.firebaseio.com",
+    "project_id": "mytrainingproject-be660",
+    "storage_bucket": "mytrainingproject-be660.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1098424389574:android:a0cea32c8e30e846",
+        "android_client_info": {
+          "package_name": "com.example.saiful.fcmdbdemoprabeesh"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1098424389574-1fsig6pda05j9aiag32kufccke6m7fa1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAkIrDvjcd50ZnAjzIWfbs4OHavZY8lPg8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1098424389574:android:9e6fb0c73a378592",
+        "android_client_info": {
+          "package_name": "com.example.saiful.fcmdbdemo2prabeesh"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1098424389574-1fsig6pda05j9aiag32kufccke6m7fa1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAkIrDvjcd50ZnAjzIWfbs4OHavZY8lPg8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1098424389574:android:d81dfadc7742e4db",
+        "android_client_info": {
+          "package_name": "com.example.saiful.fcmtestappprabeesh"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1098424389574-1fsig6pda05j9aiag32kufccke6m7fa1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAkIrDvjcd50ZnAjzIWfbs4OHavZY8lPg8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1098424389574:android:4a32893ff102f178",
+        "android_client_info": {
+          "package_name": "com.example.saiful.fcmwithappserverprabeesh"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1098424389574-1fsig6pda05j9aiag32kufccke6m7fa1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAkIrDvjcd50ZnAjzIWfbs4OHavZY8lPg8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1098424389574:android:e61041a8957e38c7",
+        "android_client_info": {
+          "package_name": "com.example.saiful.securecontacts"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1098424389574-1fsig6pda05j9aiag32kufccke6m7fa1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAkIrDvjcd50ZnAjzIWfbs4OHavZY8lPg8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1098424389574:android:23fb4ba7f485dd9d",
+        "android_client_info": {
+          "package_name": "com.example.saiful.firebaserealtimedatabase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1098424389574-1fsig6pda05j9aiag32kufccke6m7fa1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAkIrDvjcd50ZnAjzIWfbs4OHavZY8lPg8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1098424389574:android:52666ba07514e75d",
+        "android_client_info": {
+          "package_name": "com.example.saiful.contactbackup"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1098424389574-1fsig6pda05j9aiag32kufccke6m7fa1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAkIrDvjcd50ZnAjzIWfbs4OHavZY8lPg8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

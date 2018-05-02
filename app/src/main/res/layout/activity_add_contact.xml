@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.saiful.contactbackup.AddContact">
+
+    <include
+        android:id="@+id/toolbar_addcontact"
+        layout="@layout/include_toolbar" />
+
+    <LinearLayout
+        android:layout_marginTop="3dp"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:background="#66BB6A"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/reset"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:text="Reset"
+            android:onClick="reset"
+            android:textAllCaps="false"
+            android:textColor="#ffffff" />
+
+        <Button
+            android:id="@+id/ok"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:onClick="ok"
+            android:text="OK"
+            android:textColor="#ffffff" />
+    </LinearLayout>
+    <LinearLayout
+        android:background="#EEEEEE"
+        android:layout_marginTop="25dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+        <ImageView
+            android:background="@drawable/border_oneside"
+            android:layout_width="35dp"
+            android:src="@drawable/ic_action_pen"
+            android:layout_height="match_parent" />
+        <EditText
+            android:id="@+id/etTitle"
+            android:inputType="textPersonName"
+            android:layout_marginLeft="10dp"
+            android:hint="Title"
+            android:background="@null"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+    <LinearLayout
+        android:background="#EEEEEE"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+        <ImageView
+            android:background="@drawable/border_oneside"
+            android:layout_width="35dp"
+            android:src="@drawable/ic_action_pen"
+            android:layout_height="match_parent" />
+        <EditText
+            android:id="@+id/etMobile"
+            android:inputType="phone"
+            android:layout_marginLeft="10dp"
+            android:hint="Mobile Phone"
+            android:background="@null"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+    <LinearLayout
+        android:background="#EEEEEE"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+        <ImageView
+            android:background="@drawable/border_oneside"
+            android:layout_width="35dp"
+            android:src="@drawable/ic_action_pen"
+            android:layout_height="match_parent" />
+        <EditText
+            android:id="@+id/etDesk"
+            android:inputType="phone"
+            android:layout_marginLeft="10dp"
+            android:hint="Desk Phone"
+            android:background="@null"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+    <LinearLayout
+        android:background="#EEEEEE"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+        <ImageView
+            android:background="@drawable/border_oneside"
+            android:layout_width="35dp"
+            android:src="@drawable/ic_action_pen"
+            android:layout_height="match_parent" />
+        <EditText
+            android:id="@+id/etEmail"
+            android:inputType="textEmailAddress"
+            android:layout_marginLeft="10dp"
+            android:hint="Email"
+            android:background="@null"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/listView" />
+
+</LinearLayout>
