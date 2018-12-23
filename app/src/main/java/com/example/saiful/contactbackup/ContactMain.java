@@ -1,12 +1,19 @@
 package com.example.saiful.contactbackup;
 
+import android.*;
+import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.graphics.Color;
+import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.telephony.TelephonyManager;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.KeyEvent;
@@ -38,7 +45,10 @@ public class ContactMain extends AppCompatActivity {
     public static final String CONTACT_MOBILE = "contactmobile";
     public static final String CONTACT_DESK = "contactdesk";
     public static final String CONTACT_EMAIL = "contactemail";
-//                https://stackoverflow.com/questions/10355971/how-to-filter-listview-through-edittext
+    //                https://stackoverflow.com/questions/10355971/how-to-filter-listview-through-edittext
+    String info;
+    String strphoneType = "";
+    static final int PERMISSION_READ_STATE = 123;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,6 +59,13 @@ public class ContactMain extends AppCompatActivity {
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("Contact Page");
 //        toolbar.setTitleTextColor(Color.parseColor("#C51162"));
+
+        int permissionCheck = ContextCompat.checkSelfPermission(this, android.Manifest.permission.READ_PHONE_STATE);
+        if (permissionCheck == PackageManager.PERMISSION_GRANTED) {
+            MyTelephonyManager();
+        } else {
+            ActivityCompat.requestPermissions(this, new String[]{android.Manifest.permission.READ_PHONE_STATE}, PERMISSION_READ_STATE);
+        }
 
         editText = findViewById(R.id.editTextSearch);
         editText.setOnKeyListener(new View.OnKeyListener() {
@@ -122,8 +139,22 @@ public class ContactMain extends AppCompatActivity {
             }
         });
 
-        databaseReference2 = FirebaseDatabase.getInstance().getReference("contactBackup");
+        databaseReference2 = FirebaseDatabase.getInstance().getReference(info);
         contactList2 = new ArrayList<>();
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        switch (requestCode) {
+            case PERMISSION_READ_STATE: {
+                if (grantResults.length >= 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                    MyTelephonyManager();
+                } else {
+                    Toast.makeText(ContactMain.this, "You dont have required to make the action", Toast.LENGTH_SHORT).show();
+                }
+            }
+        }
     }
 
     @Override
@@ -135,7 +166,7 @@ public class ContactMain extends AppCompatActivity {
                 contactList2.clear();
                 for (DataSnapshot dataSnapshot2 : dataSnapshot.getChildren()) {
                     Contact contact = dataSnapshot2.getValue(Contact.class);
-                    if(contact.getTitle().toString()=="saiful"){
+                    if (contact.getTitle().toString() == "saiful") {
                         Toast.makeText(ContactMain.this, "hi saiful", Toast.LENGTH_SHORT).show();
                     }
                     contactList2.add(contact);
@@ -149,6 +180,25 @@ public class ContactMain extends AppCompatActivity {
 
             }
         });
+    }
+
+    private void MyTelephonyManager() {
+        TelephonyManager manager = (TelephonyManager) getSystemService(Context.TELEPHONY_SERVICE);
+        int phoneType = manager.getPhoneType();
+        switch (phoneType) {
+            case (TelephonyManager.PHONE_TYPE_CDMA):
+                strphoneType = "CDMA";
+                break;
+            case (TelephonyManager.PHONE_TYPE_GSM):
+                strphoneType = "GSM";
+                break;
+            case (TelephonyManager.PHONE_TYPE_NONE):
+                strphoneType = "NONE";
+                break;
+        }
+        boolean isRoaming = manager.isNetworkRoaming();
+        String IMEINUMBER = manager.getDeviceId();
+        info = "IMEI " + IMEINUMBER;
     }
 
 }
